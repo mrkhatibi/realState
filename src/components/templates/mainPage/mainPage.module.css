@@ -1,0 +1,104 @@
+.image {
+  border-radius: 7px;
+}
+.category {
+  text-align: center;
+  border-radius: 7px;
+  padding: 15px 15px 0px;
+  box-shadow: 0px 4px 16px rgba(128, 128, 128, 0.548);
+  color: rgb(27, 27, 184);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.category:hover {
+  transform: perspective(600px) rotateX(10deg) rotateY(10deg) scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+.categories {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.title {
+  text-align: center;
+  color: rgb(21, 21, 226);
+  font-weight: 800;
+  font-size: 72px;
+}
+
+.service {
+  list-style: none;
+  margin: -15px 13px 13px;
+  padding: 3px 8px;
+  border: 3px solid rgb(28, 28, 223);
+  border-radius: 7px;
+  color: rgb(7, 7, 56);
+  background-color: rgba(40, 40, 230, 0.137);
+  box-shadow: 0px 3px 10px rgba(0, 0, 255, 0.185);
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+}
+.cities {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+.city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  border: 4px solid transparent; /* border اصلی شفاف */
+  border-radius: 10px;
+  color: #fff;
+  background-color: #1E40FF; /* آبی پررنگ */
+  font-weight: bold;
+  padding: 5px 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 255, 0.4);
+}
+
+/* افکت نور روی بوردر */
+.city::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  border-radius: 10px;
+  padding: 4px; /* ضخامت نور */
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* روشن و حرکت نور هنگام هاور */
+.city:hover::before {
+  opacity: 1;
+  animation: move-border 1.5s linear infinite;
+}
+
+@keyframes move-border {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+
+.cityTitle{
+    text-align: center;
+    margin-top: 80px;
+}
+.cityContainer{
+    margin: 25px
+}

@@ -1,0 +1,16 @@
+.sidebar {
+  display: flex;
+  margin: 20px;
+}
+.content {
+  flex-grow: 2;
+  margin: 0px 30px;
+}
+
+@media (max-width: 610px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}

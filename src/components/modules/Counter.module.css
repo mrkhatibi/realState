@@ -1,0 +1,23 @@
+.counter {
+    font-size: x-large;
+    font-weight: 500;
+    color: blue;
+}
+
+.counterContainer {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 20px;
+  margin: 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #111;
+  box-shadow: 
+    0 0 10px rgba(102, 22, 230, 0.39),
+    0 0 20px rgba(56, 24, 236, 0.527),
+    0 0 30px rgba(24, 82, 241, 0.521),
+    0 0 40px rgba(19, 167, 236, 0.555),
+    0 0 50px rgba(68, 173, 243, 0.5);
+}
+

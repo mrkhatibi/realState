@@ -1,0 +1,13 @@
+.content {
+    width: 400px;
+    height: 170px !important;
+}
+
+
+@media (max-width : 610px) {
+    .content {
+    width: 200px;
+    height: 170px !important;
+}
+
+}

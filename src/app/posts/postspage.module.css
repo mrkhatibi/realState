@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: flex-start;
+    margin: 10px;
+}
+
+.postspage{
+    flex-grow: 3 ;
+}
+
+.sidebar {
+    flex-basis: 300px;
+}
+
+@media (max-width : 425px) {
+.container{
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 10px;
+}
+}
