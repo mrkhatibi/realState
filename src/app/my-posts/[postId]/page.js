@@ -24,10 +24,10 @@ export const generateMetadata =async ({ params  : {postId}}) => {
     title : post.title ,
     description : post.content ,
     authors : [{
-      name : user.email
+      name : user?.email
     }] ,
     other : {
-      realstate : post.realstate
+      realstate : post?.realstate
     },
   
   }
