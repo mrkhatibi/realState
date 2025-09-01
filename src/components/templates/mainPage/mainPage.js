@@ -48,7 +48,7 @@ function MainPage() {
 
         {categories.map((category) => (
           <div className={styles.category} key={category.name}>
-            <Link href={`http://localhost:3000/posts?category=${category.value}`}>
+            <Link href={`https://realstatemrkhatibi.vercel.app/posts?category=${category.value}`}>
             <Image
               src={category.image}
               alt={category.name}
@@ -66,7 +66,7 @@ function MainPage() {
         <h2 className={styles.cityTitle}>شهر های پربازدید</h2>
         <div className={styles.cities}>
           {cities.map((city) => (
-            <Link href={`http://localhost:3000/posts?city=${city}`}>
+            <Link href={`https://realstatemrkhatibi.vercel.app/posts?city=${city}`}>
             <li className={styles.city} key={city}>
               <FaCity /> 
               <h3> {city}</h3>
